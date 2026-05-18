@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfolio</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "cV49DeMOA9OwBh01K",
+        });
+    })();
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -20,7 +30,7 @@
             <a href="#aboutme"> About Me </a>
             <a href="#education"> Education </a>
             <a href="#services"> Services </a>
-            <a href="#portfolio"> Portfolio </a>
+            <a href="#project"> Project </a>
             <a href="#contact"> Contact </a>
         </nav>
     </header>
@@ -33,12 +43,12 @@
             <h3> Student of <span class="multiple-text"></span> </h3>
             <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et maxime eum iusto reprehenderit sapiente fugiat voluptate illum quo deleniti omnis, ad autem eligendi eveniet sequi quaerat earum quae? Totam, soluta? </p>
             <div class="social-media">
-                <a href="https://www.facebook.com/share/1GyFyAggTG/?mibextid=wwXIfr"> <i class="fa-brands fa-facebook"></i> </a>                
-                <a href="https://www.instagram.com/kimlay1310?igsh=ZW1pa2wxMmsxY2Zl&utm_source=qr"> <i class="fa-brands fa-instagram"></i> </a>
-                <a href="https://t.me/kimlay1310"> <i class="fa-brands fa-telegram"></i> </a>
-                <a href="https://www.linkedin.com/in/tang-kimlay-870269399"> <i class="fa-brands fa-linkedin-in"></i> </a>
+                <a href="https://www.facebook.com/share/1GyFyAggTG/?mibextid=wwXIfr" target="_blank"> <i class="fa-brands fa-facebook"></i> </a>                
+                <a href="https://www.instagram.com/kimlay1310?igsh=ZW1pa2wxMmsxY2Zl&utm_source=qr" target="_blank"> <i class="fa-brands fa-instagram"></i> </a>
+                <a href="https://t.me/kimlay1310" target="_blank"> <i class="fa-brands fa-telegram"></i> </a>
+                <a href="https://www.linkedin.com/in/tang-kimlay-870269399" target="_blank"> <i class="fa-brands fa-linkedin-in"></i> </a>
             </div>
-            <a href="#" class="btn" onclick="location.href='document/CV.pdf';"> Download CV </a>
+            <a href="#" class="btn" onclick="location.href='document/CV.pdf';" target="_blank"> Download CV </a>
         </div>
 
         <div class="home-img">
@@ -125,34 +135,34 @@
         </div>
     </section>
 
-    <!-- Portfolio -->
-    <section class="portfolio" id="portfolio">
+    <!-- Project -->
+    <section class="project" id="project">
         <h2 class="heading"> Latest <span> Projects </span> </h2>
 
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="imgaes/code1.png" alt="">
-                <div class="portfolio-layer">
-                    <h4> Web Development </h4>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>             
+        <div class="project-container">
+            <div class="project-box">
+                <img src="imgaes/TKL.png" alt="">
+                <div class="project-layer">
+                    <h4> Frontend Development </h4>
+                    <p> School Project : Website for cumputer store </p>
+                    <a href="https://pc-store-tkl.vercel.app" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>             
                 </div>
             </div>
 
-            <div class="portfolio-box">
+            <div class="project-box">
                 <img src="imgaes/code2.avif" alt="">
-                <div class="portfolio-layer">
+                <div class="project-layer">
                     <h4> Web Development </h4>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    <p> School Project : Coffee Shop </p>
                     <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
 
-            <div class="portfolio-box">
+            <div class="project-box">
                 <img src="imgaes/code3.avif" alt="">
-                <div class="portfolio-layer">
+                <div class="project-layer">
                     <h4> Web Development </h4>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    <p> School Project : Computer Shop Management System </p>
                     <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
@@ -164,22 +174,21 @@
         <h2 class="heading"> Contact <span> Me </span> </h2>
 
         <form action="#">
+            <div class="input-box" style="width: 93vw;">
+                <input type="text" placeholder="Subject" id="subject" class="subject" required>       
+            </div>
             <div class="input-box">
-                <input type="text" placeholder="Full Name">                
-                <input type="text" placeholder="Address">
-            </div>
-
-            <div class="input-box" style="width: 204%;">
-                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Full Name" id="name" class="name" required>       
+                <input type="email" placeholder="Email" id="email" class="eamil" required>                         
             </div>
 
             <div class="input-box">
-                <input type="number" placeholder="Phone Number">
-                <input type="text" placeholder="Email Subject">
+                <input type="text" placeholder="Address" id="address" class="address" required>
+                <input type="number" placeholder="Phone Number" id="phone" class="phone" required>
             </div>
 
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn" >
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" onclick="sendMail()" class="btn" >
         </form>
     </section>
 

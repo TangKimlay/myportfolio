@@ -61,7 +61,7 @@ ScrollReveal({
     delay: 200
 });
 
-ScrollReveal().reveal(".home-content, heading", {origin: "top"});
+ScrollReveal().reveal(".home-content, .heading", {origin: "top"});
 ScrollReveal().reveal(".home-img, .services-container, .portfolio-box, .contact", {origin: "buttom"});
 ScrollReveal().reveal(".home-content h1, .aboutme-img, .education-img", {origin: "left"});
 ScrollReveal().reveal(".home-content p, .aboutme-content, .education-content", {origin: "right"});
@@ -74,3 +74,17 @@ const typed = new Typed(".multiple-text", {
     backDelay: 1000,
     loop: true,
 });
+
+// contact us
+function sendMail(){
+    let parms = {
+        subject : document.getElementById("subject").value,
+        name : document.getElementById("name").value,
+        email : document.getElementById("email").value,
+        message : document.getElementById("message").value,
+        address : document.getElementById("address").value,
+        phone : document.getElementById("phone").value,
+    }
+    
+    emailjs.send("service_g8i6dlq", "template_umuim7n", parms).then(alert("Email Sent!!"))
+}
