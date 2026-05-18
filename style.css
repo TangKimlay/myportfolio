@@ -187,6 +187,40 @@ span {
     margin: 2rem 0 3rem;
 }
 
+.education{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    background: #262B40;
+}
+
+.education-img img{
+    width: 30vw;
+    height: 35vw;
+    box-shadow: 0 0 1rem #59B2F4;
+    border-radius: 5%;    
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.education-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.education-content h3 {
+    font-size: 2.6rem;
+}
+
+.education-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
 .services h2 {
     margin-bottom: 5rem;
 }
@@ -455,6 +489,14 @@ span {
         height: 90vw;
         margin-top: 4rem;
     }
+    .education{
+        flex-direction: column;
+    }
+    .education-img img{
+        width: 90vw;
+        height: 90vw;
+        margin-top: 4rem;
+    }
     .services h2{
         margin-bottom: 3rem;
     }
@@ -475,6 +517,10 @@ span {
         margin-top: 8rem;
     }
     .aboutme-img img{
+        width: 90vw;
+        margin-top: 4rem;
+    }
+    .education-img img{
         width: 90vw;
         margin-top: 4rem;
     }
