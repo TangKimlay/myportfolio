@@ -62,7 +62,7 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal(".home-content, .heading", {origin: "top"});
-ScrollReveal().reveal(".home-img, .services-container, .portfolio-box, .contact", {origin: "buttom"});
+ScrollReveal().reveal(".home-img, .services-container, .project-box, .contact", {origin: "buttom"});
 ScrollReveal().reveal(".home-content h1, .aboutme-img, .education-img", {origin: "left"});
 ScrollReveal().reveal(".home-content p, .aboutme-content, .education-content", {origin: "right"});
 
